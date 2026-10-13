@@ -1,0 +1,19 @@
+# Vida Plena Premium Plus
+
+## Archivos del paquete
+- `index.html`: aplicación ampliada; mantiene las funciones existentes y añade nuevas secciones.
+- `manifest.webmanifest`, `icon-192.png`, `icon-512.png`: metadatos e íconos para instalar como aplicación web.
+- `sw.js`: caché con conexión prioritaria y respaldo local para uso sin conexión.
+- `meditaciones.json`: catálogo de meditaciones guiadas.
+- `contenido-vida-plena.json`: sugerencias de memoria, reflexión, cuento nocturno y recursos destacados.
+
+## Cómo actualizar contenido sin pagar un servidor
+La app no necesita backend. Publicá todos estos archivos juntos en un alojamiento estático por HTTPS que permita el uso previsto de tu producto. Para renovar meditaciones, editá `meditaciones.json`; para renovar el consejo del día, las propuestas de memoria, la reflexión, el cuento y los recursos, editá `contenido-vida-plena.json`. La app consulta estos catálogos al abrirse y conserva el contenido incluido si no hay conexión. Las actualizaciones aparecen después de publicar la versión nueva de los archivos; no se generan solas ni requieren una API de IA. Revisá las condiciones del proveedor de hosting antes de distribuir una aplicación comercial.
+
+`fetch()` de JSON externos suele estar bloqueado al abrir un HTML directamente desde `file://`. Para comprobar actualizaciones, abrí la aplicación desde su dirección HTTPS publicada.
+
+## Qué incluye
+Agenda personal con exportación `.ics` e impresión; diario de ánimo y del sueño; cuento tranquilo con lectura opcional; meditación y relajación guiada; elección de voz; ambientes generados localmente; actividades de memoria, cálculo y refranes; recordatorios de rutina y lista de seguridad del hogar; propuestas para el bienestar y los vínculos; guías prácticas; búsqueda externa para dudas que no estén en la app; ajuste de letra y modo de entrada opcional.
+
+## Privacidad y límites
+Los registros nuevos se guardan localmente en el navegador, con opciones de exportación o impresión donde están disponibles. No se envían a un servidor. Exportá una copia antes de cambiar de dispositivo o borrar los datos del navegador. La búsqueda abre un buscador externo: Vida Plena no analiza ni verifica sus resultados. No ingreses datos personales en la búsqueda. La voz depende del navegador/dispositivo. Los ambientes musicales y de lluvia son sonidos sintetizados localmente, no grabaciones. Las funciones de bienestar son educativas, no diagnostican ni reemplazan atención médica.
